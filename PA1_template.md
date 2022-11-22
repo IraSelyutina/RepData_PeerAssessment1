@@ -77,7 +77,7 @@ Histogram of the total number of steps taken each day
 hist(amdDate$steps,col="yellow", xlab="Day", main="Total number of steps taken each day")
 ```
 
-![](PA1_template_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](Figs/unnamed-chunk-3-1.png)<!-- -->
 
 Mean and median of the total number of steps taken per day
 
@@ -99,7 +99,7 @@ abline(h=max_steps, lty = 3)
 abline(v=amdInterval[amdInterval$meanSteps == max(amdInterval$meanSteps),1],lty = 3)
 ```
 
-![](PA1_template_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](Figs/unnamed-chunk-5-1.png)<!-- -->
 
 Calculation of 5-minute interval, on average across all the days in the
 dataset, contains the maximum number of steps(as seen data correspond to
@@ -166,7 +166,7 @@ hist(amdFullDate$steps, col="yellow", add=TRUE)
 legend("topright", c("Steps with NA", "Steps with replaced NA"), col=c("yellow", "blue"), lwd=8, cex=0.8)
 ```
 
-![](PA1_template_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](Figs/unnamed-chunk-11-1.png)<!-- -->
 
 Mean and median total number of steps taken per day
 
@@ -197,7 +197,7 @@ amdFullW <- amdFull %>% group_by(weekdayType,interval) %>% summarise(steps_woNA 
 xyplot(steps_woNA ~ interval | weekdayType,amdFullW, layout=c(1,2),type="l")
 ```
 
-![](PA1_template_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](Figs/unnamed-chunk-13-1.png)<!-- -->
 
 On the weekends number of steps bigger in majority of intervals. But
 maximum average number of steps across all the days - was done in
